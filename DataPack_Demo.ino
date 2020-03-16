@@ -57,7 +57,7 @@ void loop()
       case 'A': { PORTD = Pnumber; break; //控制DA模块（其中0、1号引脚被串口占用）
                   digitalWrite(8, Pnumber&1); digitalWrite(10, (Pnumber&2)>>1);
                   // 8号引脚取数据的最后一位，10取数据倒数第二位【9号引脚是时钟线】
-				}
+                }
       default: ;
     }
     finishFlag = 0;
