@@ -5,7 +5,7 @@
 char part = '*';
 byte Pnumber = 0; //int Pnumber = 0;//
 byte data[5] = {63,63,63,63,63}; // 即：?????
-byte term = 0;
+char term = '?'; // byte term = 0;
 unsigned char rec = 0; // 接收状态标志
 unsigned char count = 0; // 数据包地址
 unsigned char finishFlag = 0; // 接收完成标志
