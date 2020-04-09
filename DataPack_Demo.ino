@@ -38,14 +38,14 @@ void loop()
   if (Serial.available() > 0)  
   {
     term = Serial.read();
-    if ( term == 0x3C ) // 帧头：<
-    {    rec = 1;    count = 0;    }
     if ( term == 0x3E ) // 帧尾：>
     {	rec = 0;    finishFlag = 1;
         part = data[0];    Pnumber = data[1];
     }
     if (rec)
     {    data[count++] = term;    } // 数据存进data数组
+    if ( term == 0x3C ) // 帧头：<
+    {    rec = 1;    count = 0;    }
   }
   //————对12号引脚、PortD进行操作————
   if (finishFlag)
